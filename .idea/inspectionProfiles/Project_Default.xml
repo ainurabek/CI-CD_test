@@ -1,0 +1,24 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="KT.apps.dispatching.models.Event.objects" />
+          <option value="KT.apps.opu.objects.models.Point.objects" />
+          <option value="KT.apps.opu.objects.models.Object.objects" />
+          <option value="KT.apps.opu.circuits.models.Circuit.objects" />
+          <option value="KT.apps.dispatching.models.TypeOfJournal.objects" />
+          <option value="KT.apps.opu.objects.models.Outfit.objects" />
+          <option value="KT.apps.opu.objects.models.OutfitWorker.objects" />
+          <option value="KT.apps.dispatching.models.Comments.objects" />
+          <option value="KT.apps.dispatching.models.Reason.objects" />
+          <option value="KT.apps.dispatching.models.Index.objects" />
+          <option value="apps.secondary" />
+          <option value="apps.accounts" />
+          <option value="apps.analysis" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
