@@ -23,12 +23,23 @@ jobs:
         pip install flake8 pytest
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: linting
-            uses: alexanderdamiani/pylinter@v1.3.0
-            with:
-              python-root: '.'
-              flake8-flags: ''
-              mypy-flags: ''
-              fail-on-isort: true
+        uses: alexanderdamiani/pylinter@v1.3.0
+        with:
+          python-root: '.'
+          flake8-flags: ''
+          mypy-flags: '--ignore-missing-imports'
+          fail-on-isort: false
+          skip-flake8: true
+    - name: commit isort changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add -A && git diff-index --cached --quiet HEAD || git commit -m 'isort'
+    - name: push isort changes
+      uses: ad-m/github-push-action@v0.5.0
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: ${{ github.ref }}
     - name: Test with pytest
       run:
         # calling via python will also add the current directory to sys.path
