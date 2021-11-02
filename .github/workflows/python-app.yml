@@ -30,6 +30,6 @@ jobs:
           mypy-flags: ''
           fail-on-isort: true
       - name: Test with pytest
-          run:
-            if [ -d tests ] || [ -d test ]; then python -m pytest; fi
+        run: |
+          if [ -d tests ] || [ -d test ]; then python -m pytest; fi
 

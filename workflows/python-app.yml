@@ -30,6 +30,6 @@ jobs:
           mypy-flags: ''
           fail-on-isort: true
     - name: Test with pytest
-      run:
+      run: |
         # calling via python will also add the current directory to sys.path
         python -m pytest
